@@ -1,6 +1,7 @@
-package br.com.brazilsistem.libnfse.abrasf.v100.domain;
+package br.com.brazilsistem.libnfse.abrasf.v100.domain.consultaEstrutura;
 
 import br.com.brazilsistem.libnfse.abrasf.NFSBase;
+import br.com.brazilsistem.libnfse.abrasf.v100.domain.consultaEstrutura.CompartilhamentoNfse;
 import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlElementWrapper;
 import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlProperty;
 import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlRootElement;

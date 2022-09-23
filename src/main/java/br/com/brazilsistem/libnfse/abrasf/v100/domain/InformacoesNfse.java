@@ -79,19 +79,4 @@ public class InformacoesNfse extends NFSBase {
     @JacksonXmlProperty(localName = "ConstrucaoCivil")
     private IdentificacaoConstrucaoCivil dadosConstrucaoCivil;
 
-//    public LocalDateTime getDataEmissao() {
-//        return dataEmissao;
-//    }
-//
-//    public void setDataEmissao(String dataEmissao) {
-//        this.dataEmissao = LocalDateTime.parse(dataEmissao);
-//    }
-//
-//    public LocalDateTime getDataCompetencia() {
-//        return dataCompetencia;
-//    }
-//
-//    public void setDataCompetencia(String dataCompetencia) {
-//        this.dataCompetencia = LocalDateTime.parse(dataCompetencia);
-//    }
 }
