@@ -1,36 +1,36 @@
 package br.com.brazilsistem.libnfse.abrasf.v100.domain;
 
 import br.com.brazilsistem.libnfse.abrasf.NFSBase;
+import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlProperty;
+import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlRootElement;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import org.simpleframework.xml.Element;
-import org.simpleframework.xml.Root;
 
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-@Root(name = "Endereco")
+@JacksonXmlRootElement(localName = "Endereco")
 public class Endereco extends NFSBase {
 
-    @Element(name = "Endereco", required = false)
+    @JacksonXmlProperty(localName = "Endereco")
     private String logradouro;
 
-    @Element(name = "Numero", required = false)
+    @JacksonXmlProperty(localName = "Numero")
     private String numero;
 
-    @Element(name = "Complemento", required = false)
+    @JacksonXmlProperty(localName = "Complemento")
     private String complemento;
 
-    @Element(name = "Bairro", required = false)
+    @JacksonXmlProperty(localName = "Bairro")
     private String bairro;
 
-    @Element(name = "CodigoMunicipio", required = false)
+    @JacksonXmlProperty(localName = "CodigoMunicipio")
     private int codigoMunicipioIbge;
 
-    @Element(name = "Uf", required = false)
+    @JacksonXmlProperty(localName = "Uf")
     private String unidadeFederativa;
 
-    @Element(name = "Cep", required = false)
+    @JacksonXmlProperty(localName = "Cep")
     private int cep;
 }

@@ -1,34 +1,34 @@
 package br.com.brazilsistem.libnfse.abrasf.v100.domain;
 
 import br.com.brazilsistem.libnfse.abrasf.NFSBase;
+import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlProperty;
+import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlRootElement;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import org.simpleframework.xml.Element;
-import org.simpleframework.xml.Root;
 
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-@Root(name = "Servico")
+@JacksonXmlRootElement(localName = "Servico")
 public class ServicoNfse extends NFSBase {
 
-    @Element(name = "Valores")
+    @JacksonXmlProperty(localName = "Valores")
     private ValoresNfse valores;
 
-    @Element(name = "ItemListaServico")
+    @JacksonXmlProperty(localName = "ItemListaServico")
     private String codigoItemServico;
 
-    @Element(name = "CodigoCnae", required = false)
+    @JacksonXmlProperty(localName = "CodigoCnae")
     private int codigoCnae;
 
-    @Element(name = "CodigoTributacaoMunicipio", required = false)
+    @JacksonXmlProperty(localName = "CodigoTributacaoMunicipio")
     private String codigoTributacaoMunicipio;
 
-    @Element(name = "Discriminacao")
+    @JacksonXmlProperty(localName = "Discriminacao")
     private String discriminacaoConteudo;
 
-    @Element(name = "CodigoMunicipio")
+    @JacksonXmlProperty(localName = "CodigoMunicipio")
     private int codigoMunicipioIbge;
 
 }

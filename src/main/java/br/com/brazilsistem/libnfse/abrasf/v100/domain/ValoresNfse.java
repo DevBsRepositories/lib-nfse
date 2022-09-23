@@ -1,63 +1,63 @@
 package br.com.brazilsistem.libnfse.abrasf.v100.domain;
 
 import br.com.brazilsistem.libnfse.abrasf.NFSBase;
+import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlProperty;
+import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlRootElement;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import org.simpleframework.xml.Element;
-import org.simpleframework.xml.Root;
 
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-@Root(name = "Valores")
+@JacksonXmlRootElement(localName = "Valores")
 public class ValoresNfse extends NFSBase {
 
-    @Element(name = "ValorServicos")
+    @JacksonXmlProperty(localName = "ValorServicos")
     private double valorServicos;
 
-    @Element(name = "ValorDeducoes", required = false)
+    @JacksonXmlProperty(localName = "ValorDeducoes")
     private double valorDeducoes;
 
-    @Element(name = "ValorPis", required = false)
+    @JacksonXmlProperty(localName = "ValorPis")
     private double valorPis;
 
-    @Element(name = "ValorCofins", required = false)
+    @JacksonXmlProperty(localName = "ValorCofins")
     private double valorCofins;
 
-    @Element(name = "ValorInss", required = false)
+    @JacksonXmlProperty(localName = "ValorInss")
     private double valorInss;
 
-    @Element(name = "ValorIr", required = false)
+    @JacksonXmlProperty(localName = "ValorIr")
     private double valorIr;
 
-    @Element(name = "ValorCsll", required = false)
+    @JacksonXmlProperty(localName = "ValorCsll")
     private double valorCSll;
 
-    @Element(name = "IssRetido")
+    @JacksonXmlProperty(localName = "IssRetido")
     private int issRetido;
 
-    @Element(name = "ValorIss", required = false)
+    @JacksonXmlProperty(localName = "ValorIss")
     private double valorIss;
 
-    @Element(name = "OutrasRetencoes", required = false)
+    @JacksonXmlProperty(localName = "OutrasRetencoes")
     private double valorOutrasRetencoes;
 
-    @Element(name = "BaseCalculo", required = false)
+    @JacksonXmlProperty(localName = "BaseCalculo")
     private double valorBaseCalculo;
 
-    @Element(name = "Aliquota", required = false)
+    @JacksonXmlProperty(localName = "Aliquota")
     private double percentualAliquota;
 
-    @Element(name = "ValorLiquidoNfse", required = false)
+    @JacksonXmlProperty(localName = "ValorLiquidoNfse")
     private double valorLiquidoNfse;
 
-    @Element(name = "ValorIssRetido", required = false)
+    @JacksonXmlProperty(localName = "ValorIssRetido")
     private double valorIssRetido;
 
-    @Element(name = "DescontoCondicionado", required = false)
+    @JacksonXmlProperty(localName = "DescontoCondicionado")
     private double valorDescontoCondicionado;
 
-    @Element(name = "DescontoIncondicionado", required = false)
+    @JacksonXmlProperty(localName = "DescontoIncondicionado")
     private double valorDescontoIncondicionado;
 }

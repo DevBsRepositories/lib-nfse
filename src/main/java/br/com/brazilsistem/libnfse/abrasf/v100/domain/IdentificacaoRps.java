@@ -1,25 +1,25 @@
 package br.com.brazilsistem.libnfse.abrasf.v100.domain;
 
 import br.com.brazilsistem.libnfse.abrasf.NFSBase;
+import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlProperty;
+import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlRootElement;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import org.simpleframework.xml.Element;
-import org.simpleframework.xml.Root;
 
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-@Root(name = "IdentificacaoRps")
+@JacksonXmlRootElement(localName = "IdentificacaoRps")
 public class IdentificacaoRps extends NFSBase {
 
-    @Element(name = "Numero", required = false)
+    @JacksonXmlProperty(localName = "Numero")
     private int numeroRps;
 
-    @Element(name = "Serie")
+    @JacksonXmlProperty(localName = "Serie")
     private String serieRps;
 
-    @Element(name = "Tipo")
+    @JacksonXmlProperty(localName = "Tipo")
     private int tipoRps;
 
 }

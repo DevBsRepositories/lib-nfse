@@ -1,87 +1,97 @@
 package br.com.brazilsistem.libnfse.abrasf.v100.domain;
 
 import br.com.brazilsistem.libnfse.abrasf.NFSBase;
-import com.fasterxml.jackson.annotation.JsonFormat;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlProperty;
+import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlRootElement;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import org.simpleframework.xml.Attribute;
-import org.simpleframework.xml.Element;
-import org.simpleframework.xml.Root;
-import org.springframework.format.annotation.DateTimeFormat;
 
-import java.sql.Timestamp;
+import java.time.LocalDate;
 import java.time.LocalDateTime;
-import java.time.ZonedDateTime;
-import java.util.Calendar;
-import java.util.Date;
 
 
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-@Root(name = "InfNfse", strict = false)
+@JacksonXmlRootElement(localName = "InfNfse")
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class InformacoesNfse extends NFSBase {
 
-    @Attribute(name = "id")
+    @JacksonXmlProperty(localName = "id", isAttribute = true)
     private String idTag;
 
-    @Element(name = "Numero")
+    @JacksonXmlProperty(localName = "Numero")
     private int numeroNfse;
 
-    @Element(name = "CodigoVerificacao")
+    @JacksonXmlProperty(localName = "CodigoVerificacao")
     private String codigoVerificacao;
 
-    @Element(name = "DataEmissao")
-    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd@HH:mm:ss")
-    private String dataEmissao;
+    @JacksonXmlProperty(localName = "DataEmissao")
+    private LocalDateTime dataEmissao;
 
-    @Element(name = "IdentificacaoRps", required = false)
+    @JacksonXmlProperty(localName = "IdentificacaoRps")
     private IdentificacaoRps identificacaoRps;
 
-    @Element(name = "DataEmissaoRps", required = false)
-    private Date dataEmissaoRps;
+    @JacksonXmlProperty(localName = "DataEmissaoRps")
+    private LocalDate dataEmissaoRps;
 
-    @Element(name = "NaturezaOperacao")
+    @JacksonXmlProperty(localName = "NaturezaOperacao")
     private int naturezaOperacao;
 
-    @Element(name = "RegimeEspecialTributacao", required = false)
+    @JacksonXmlProperty(localName = "RegimeEspecialTributacao")
     private int regimeEspecialTributacao;
 
-    @Element(name = "OptanteSimplesNacional")
+    @JacksonXmlProperty(localName = "OptanteSimplesNacional")
     private int optanteSimplesNacional;
 
-    @Element(name = "IncentivadorCultural")
+    @JacksonXmlProperty(localName = "IncentivadorCultural")
     private int incentivadorCultural;
 
-    @Element(name = "Competencia")
-    private String dataCompetencia;
+    @JacksonXmlProperty(localName = "Competencia")
+    private LocalDateTime dataCompetencia;
 
-    @Element(name = "NfseSubstituida", required = false)
+    @JacksonXmlProperty(localName = "NfseSubstituida")
     private int numeroNfseSubstituida;
 
-    @Element(name = "OutrasInformacoes", required = false)
+    @JacksonXmlProperty(localName = "OutrasInformacoes")
     private String outrasInformacoes;
 
-    @Element(name = "Servico")
+    @JacksonXmlProperty(localName = "Servico")
     private ServicoNfse dadosServico;
 
-    @Element(name = "ValorCredito", required = false)
+    @JacksonXmlProperty(localName = "ValorCredito")
     private double valorCredito;
 
-    @Element(name = "PrestadorServico")
+    @JacksonXmlProperty(localName = "PrestadorServico")
     private PrestadorNfse prestadorNfse;
 
-    @Element(name = "TomadorServico")
+    @JacksonXmlProperty(localName = "TomadorServico")
     private TomadorNfse tomadorNfse;
 
-    @Element(name = "IntermediarioServico", required = false)
+    @JacksonXmlProperty(localName = "IntermediarioServico")
     private IntermediarioServicoNFSe identificacaoIntermediarioServico;
 
-    @Element(name = "OrgaoGerador")
+    @JacksonXmlProperty(localName = "OrgaoGerador")
     private IdentificacaoOrgaoGerador orgaoGerador;
 
-    @Element(name = "ConstrucaoCivil", required = false)
+    @JacksonXmlProperty(localName = "ConstrucaoCivil")
     private IdentificacaoConstrucaoCivil dadosConstrucaoCivil;
 
+//    public LocalDateTime getDataEmissao() {
+//        return dataEmissao;
+//    }
+//
+//    public void setDataEmissao(String dataEmissao) {
+//        this.dataEmissao = LocalDateTime.parse(dataEmissao);
+//    }
+//
+//    public LocalDateTime getDataCompetencia() {
+//        return dataCompetencia;
+//    }
+//
+//    public void setDataCompetencia(String dataCompetencia) {
+//        this.dataCompetencia = LocalDateTime.parse(dataCompetencia);
+//    }
 }

@@ -1,28 +1,28 @@
 package br.com.brazilsistem.libnfse.abrasf.v100.domain;
 
 import br.com.brazilsistem.libnfse.abrasf.NFSBase;
+import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlProperty;
+import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlRootElement;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import org.simpleframework.xml.Element;
-import org.simpleframework.xml.Root;
 
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-@Root(name = "TomadorServico")
+@JacksonXmlRootElement(localName = "TomadorServico")
 public class TomadorNfse extends NFSBase {
 
-    @Element(name = "IdentificacaoTomador", required = false)
+    @JacksonXmlProperty(localName = "IdentificacaoTomador")
     private IdentificacaoTomador identificacaoTomador;
 
-    @Element(name = "RazaoSocial", required = false)
+    @JacksonXmlProperty(localName = "RazaoSocial")
     private String razaoSocial;
 
-    @Element(name = "Endereco", required = false)
+    @JacksonXmlProperty(localName = "Endereco")
     private Endereco endereco;
 
-    @Element(name = "Contato", required = false)
+    @JacksonXmlProperty(localName = "Contato")
     private Contato contato;
 
 }
