@@ -1,4 +1,4 @@
-package br.com.brazilsistem.libnfse.abrasf.util;
+package br.com.brazilsistem.libnfse.util;
 
 import com.fasterxml.jackson.core.JsonParser;
 import com.fasterxml.jackson.databind.DeserializationContext;
