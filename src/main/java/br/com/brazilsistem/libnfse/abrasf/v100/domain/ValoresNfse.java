@@ -1,6 +1,8 @@
 package br.com.brazilsistem.libnfse.abrasf.v100.domain;
 
 import br.com.brazilsistem.libnfse.abrasf.NFSBase;
+import br.com.brazilsistem.libnfse.abrasf.util.NumericBooleanDeserializer;
+import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlProperty;
 import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlRootElement;
 import lombok.AllArgsConstructor;
@@ -35,7 +37,8 @@ public class ValoresNfse extends NFSBase {
     private double valorCSll;
 
     @JacksonXmlProperty(localName = "IssRetido")
-    private int issRetido;
+    @JsonDeserialize(using = NumericBooleanDeserializer.class)
+    private Boolean issRetido;
 
     @JacksonXmlProperty(localName = "ValorIss")
     private double valorIss;
