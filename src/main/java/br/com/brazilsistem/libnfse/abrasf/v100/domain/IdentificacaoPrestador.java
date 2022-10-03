@@ -13,7 +13,7 @@ import lombok.NoArgsConstructor;
 public class IdentificacaoPrestador {
 
     @JacksonXmlProperty(localName = "Cnpj")
-    private int cnpj;
+    private String cnpj;
 
     @JacksonXmlProperty(localName = "InscricaoMunicipal")
     private int inscricaoMunicipal;

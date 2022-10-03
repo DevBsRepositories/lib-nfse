@@ -14,9 +14,9 @@ import lombok.NoArgsConstructor;
 public class CpfCnpj extends NFSBase {
 
     @JacksonXmlProperty(localName = "Cpf")
-    private int cpf;
+    private String cpf;
 
     @JacksonXmlProperty(localName = "Cnpj")
-    private int cnpj;
+    private String cnpj;
 
 }
