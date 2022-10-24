@@ -16,6 +16,6 @@ public class IdentificacaoPrestador {
     private String cnpj;
 
     @JacksonXmlProperty(localName = "InscricaoMunicipal")
-    private int inscricaoMunicipal;
+    private String inscricaoMunicipal;
 
 }

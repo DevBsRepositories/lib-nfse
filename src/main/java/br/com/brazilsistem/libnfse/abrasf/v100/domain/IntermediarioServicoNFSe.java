@@ -20,6 +20,6 @@ public class IntermediarioServicoNFSe extends NFSBase {
     private CpfCnpj cpfCnpj;
 
     @JacksonXmlProperty(localName = "InscricaoMunicipal")
-    private int inscricaoMunicipal;
+    private String inscricaoMunicipal;
 
 }

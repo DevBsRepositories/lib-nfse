@@ -26,11 +26,11 @@ public class Endereco extends NFSBase {
     private String bairro;
 
     @JacksonXmlProperty(localName = "CodigoMunicipio")
-    private int codigoMunicipioIbge;
+    private String codigoMunicipioIbge;
 
     @JacksonXmlProperty(localName = "Uf")
     private String unidadeFederativa;
 
     @JacksonXmlProperty(localName = "Cep")
-    private int cep;
+    private String cep;
 }

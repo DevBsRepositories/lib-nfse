@@ -17,6 +17,6 @@ public class IdentificacaoTomador extends NFSBase {
     private CpfCnpj cpfOuCnpj;
 
     @JacksonXmlProperty(localName = "InscricaoMunicipal")
-    private int inscricaoMunicipal;
+    private String inscricaoMunicipal;
 
 }

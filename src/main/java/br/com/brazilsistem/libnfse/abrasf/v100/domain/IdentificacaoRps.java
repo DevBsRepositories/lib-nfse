@@ -14,12 +14,12 @@ import lombok.NoArgsConstructor;
 public class IdentificacaoRps extends NFSBase {
 
     @JacksonXmlProperty(localName = "Numero")
-    private int numeroRps;
+    private String numeroRps;
 
     @JacksonXmlProperty(localName = "Serie")
     private String serieRps;
 
     @JacksonXmlProperty(localName = "Tipo")
-    private int tipoRps;
+    private Integer tipoRps;
 
 }

@@ -14,7 +14,7 @@ import lombok.NoArgsConstructor;
 public class IdentificacaoOrgaoGerador extends NFSBase {
 
     @JacksonXmlProperty(localName = "CodigoMunicipio")
-    private int codigoMunicipioIbge;
+    private String codigoMunicipioIbge;
 
     @JacksonXmlProperty(localName = "Uf")
     private String uf;

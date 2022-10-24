@@ -25,7 +25,7 @@ public class InformacoesNfse extends NFSBase {
     private String idTag;
 
     @JacksonXmlProperty(localName = "Numero")
-    private int numeroNfse;
+    private String numeroNfse;
 
     @JacksonXmlProperty(localName = "CodigoVerificacao")
     private String codigoVerificacao;
@@ -40,10 +40,10 @@ public class InformacoesNfse extends NFSBase {
     private LocalDate dataEmissaoRps;
 
     @JacksonXmlProperty(localName = "NaturezaOperacao")
-    private int naturezaOperacao;
+    private Integer naturezaOperacao;
 
     @JacksonXmlProperty(localName = "RegimeEspecialTributacao")
-    private int regimeEspecialTributacao;
+    private Integer regimeEspecialTributacao;
 
     @JacksonXmlProperty(localName = "OptanteSimplesNacional")
     @JsonDeserialize(using = NumericBooleanDeserializer.class)
@@ -57,7 +57,7 @@ public class InformacoesNfse extends NFSBase {
     private LocalDateTime dataCompetencia;
 
     @JacksonXmlProperty(localName = "NfseSubstituida")
-    private int numeroNfseSubstituida;
+    private String numeroNfseSubstituida;
 
     @JacksonXmlProperty(localName = "OutrasInformacoes")
     private String outrasInformacoes;
@@ -66,7 +66,7 @@ public class InformacoesNfse extends NFSBase {
     private ServicoNfse dadosServico;
 
     @JacksonXmlProperty(localName = "ValorCredito")
-    private double valorCredito;
+    private Double valorCredito;
 
     @JacksonXmlProperty(localName = "PrestadorServico")
     private PrestadorNfse prestadorNfse;
