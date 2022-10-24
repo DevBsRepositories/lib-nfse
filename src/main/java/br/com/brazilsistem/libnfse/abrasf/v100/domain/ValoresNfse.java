@@ -1,6 +1,8 @@
 package br.com.brazilsistem.libnfse.abrasf.v100.domain;
 
 import br.com.brazilsistem.libnfse.abrasf.NFSBase;
+import br.com.brazilsistem.libnfse.util.NumericBooleanDeserializer;
+import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlProperty;
 import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlRootElement;
 import lombok.AllArgsConstructor;
@@ -14,50 +16,51 @@ import lombok.NoArgsConstructor;
 public class ValoresNfse extends NFSBase {
 
     @JacksonXmlProperty(localName = "ValorServicos")
-    private double valorServicos;
+    private Double valorServicos;
 
     @JacksonXmlProperty(localName = "ValorDeducoes")
-    private double valorDeducoes;
+    private Double valorDeducoes;
 
     @JacksonXmlProperty(localName = "ValorPis")
-    private double valorPis;
+    private Double valorPis;
 
     @JacksonXmlProperty(localName = "ValorCofins")
-    private double valorCofins;
+    private Double valorCofins;
 
     @JacksonXmlProperty(localName = "ValorInss")
-    private double valorInss;
+    private Double valorInss;
 
     @JacksonXmlProperty(localName = "ValorIr")
-    private double valorIr;
+    private Double valorIr;
 
     @JacksonXmlProperty(localName = "ValorCsll")
-    private double valorCSll;
+    private Double valorCSll;
 
     @JacksonXmlProperty(localName = "IssRetido")
-    private int issRetido;
+    @JsonDeserialize(using = NumericBooleanDeserializer.class)
+    private Boolean issRetido;
 
     @JacksonXmlProperty(localName = "ValorIss")
-    private double valorIss;
+    private Double valorIss;
 
     @JacksonXmlProperty(localName = "OutrasRetencoes")
-    private double valorOutrasRetencoes;
+    private Double valorOutrasRetencoes;
 
     @JacksonXmlProperty(localName = "BaseCalculo")
-    private double valorBaseCalculo;
+    private Double valorBaseCalculo;
 
     @JacksonXmlProperty(localName = "Aliquota")
-    private double percentualAliquota;
+    private Double percentualAliquota;
 
     @JacksonXmlProperty(localName = "ValorLiquidoNfse")
-    private double valorLiquidoNfse;
+    private Double valorLiquidoNfse;
 
     @JacksonXmlProperty(localName = "ValorIssRetido")
-    private double valorIssRetido;
+    private Double valorIssRetido;
 
     @JacksonXmlProperty(localName = "DescontoCondicionado")
-    private double valorDescontoCondicionado;
+    private Double valorDescontoCondicionado;
 
     @JacksonXmlProperty(localName = "DescontoIncondicionado")
-    private double valorDescontoIncondicionado;
+    private Double valorDescontoIncondicionado;
 }

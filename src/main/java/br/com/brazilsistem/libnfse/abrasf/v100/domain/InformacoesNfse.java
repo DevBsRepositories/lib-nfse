@@ -1,7 +1,9 @@
 package br.com.brazilsistem.libnfse.abrasf.v100.domain;
 
 import br.com.brazilsistem.libnfse.abrasf.NFSBase;
+import br.com.brazilsistem.libnfse.util.NumericBooleanDeserializer;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlProperty;
 import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlRootElement;
 import lombok.AllArgsConstructor;
@@ -23,7 +25,7 @@ public class InformacoesNfse extends NFSBase {
     private String idTag;
 
     @JacksonXmlProperty(localName = "Numero")
-    private int numeroNfse;
+    private String numeroNfse;
 
     @JacksonXmlProperty(localName = "CodigoVerificacao")
     private String codigoVerificacao;
@@ -38,22 +40,24 @@ public class InformacoesNfse extends NFSBase {
     private LocalDate dataEmissaoRps;
 
     @JacksonXmlProperty(localName = "NaturezaOperacao")
-    private int naturezaOperacao;
+    private Integer naturezaOperacao;
 
     @JacksonXmlProperty(localName = "RegimeEspecialTributacao")
-    private int regimeEspecialTributacao;
+    private Integer regimeEspecialTributacao;
 
     @JacksonXmlProperty(localName = "OptanteSimplesNacional")
-    private int optanteSimplesNacional;
+    @JsonDeserialize(using = NumericBooleanDeserializer.class)
+    private Boolean optanteSimplesNacional;
 
     @JacksonXmlProperty(localName = "IncentivadorCultural")
-    private int incentivadorCultural;
+    @JsonDeserialize(using = NumericBooleanDeserializer.class)
+    private Boolean incentivadorCultural;
 
     @JacksonXmlProperty(localName = "Competencia")
     private LocalDateTime dataCompetencia;
 
     @JacksonXmlProperty(localName = "NfseSubstituida")
-    private int numeroNfseSubstituida;
+    private String numeroNfseSubstituida;
 
     @JacksonXmlProperty(localName = "OutrasInformacoes")
     private String outrasInformacoes;
@@ -62,7 +66,7 @@ public class InformacoesNfse extends NFSBase {
     private ServicoNfse dadosServico;
 
     @JacksonXmlProperty(localName = "ValorCredito")
-    private double valorCredito;
+    private Double valorCredito;
 
     @JacksonXmlProperty(localName = "PrestadorServico")
     private PrestadorNfse prestadorNfse;

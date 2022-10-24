@@ -20,7 +20,7 @@ public class ServicoNfse extends NFSBase {
     private String codigoItemServico;
 
     @JacksonXmlProperty(localName = "CodigoCnae")
-    private int codigoCnae;
+    private String codigoCnae;
 
     @JacksonXmlProperty(localName = "CodigoTributacaoMunicipio")
     private String codigoTributacaoMunicipio;
@@ -29,6 +29,6 @@ public class ServicoNfse extends NFSBase {
     private String discriminacaoConteudo;
 
     @JacksonXmlProperty(localName = "CodigoMunicipio")
-    private int codigoMunicipioIbge;
+    private String codigoMunicipioIbge;
 
 }
