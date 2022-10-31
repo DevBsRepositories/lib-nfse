@@ -9,6 +9,9 @@ import java.io.IOException;
 
 public class XmlConverter {
 
+    public XmlConverter() {
+    }
+
     public ConsultaNfseResposta read(String xml){
         try {
             ObjectMapper xmlMapper = XmlMapper.xmlBuilder()

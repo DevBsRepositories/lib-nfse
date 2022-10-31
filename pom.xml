@@ -10,7 +10,7 @@
 	</parent>
 	<groupId>br.com.brazilsistem</groupId>
 	<artifactId>lib-nfse</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>0.0.2-SNAPSHOT</version>
 	<name>lib-nfse</name>
 	<description>lib-nfse</description>
 	<properties>
